@@ -8,9 +8,11 @@
 
 #import "RatesViewController.h"
 #import "RateCell.h"
+#import "Palette.h"
 
 #import "NetworkManager.h"
 #import "ReferenceRatesParser.h"
+#import "Reachability.h"
 
 #import "NSObject+Additions.h"
 #import "UITableView+Additions.h"
@@ -29,6 +31,8 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
 @property (strong, nonatomic) ReferenceRatesParser *parser;
 @property (strong, nonatomic) ReferenceRates *referenceRates;
 
+@property (nonatomic) Reachability *internetReachability;
+
 @end
 
 @implementation RatesViewController
@@ -38,8 +42,18 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self addNotification];
+    
+    self.internetReachability = [Reachability reachabilityForInternetConnection];
+    [self.internetReachability startNotifier];
+    [self updateInterfaceWithReachability:self.internetReachability];
+    
     [self.tableView AZ_registerNibWithName:[RateCell AZ_className]];
-    [self getReferenceRates];
+}
+
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
 }
 
 #pragma mark - Private methods
@@ -62,6 +76,50 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
         
         [self.activityIndicator stopAnimating];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }];
+}
+
+- (void)updateInterfaceWithReachability:(Reachability *)reachability {
+    
+    if (reachability == self.internetReachability) {
+        
+        NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+        
+        if (networkStatus == NotReachable) {
+            
+            self.dateLabel.backgroundColor = [Palette grayColor];
+            self.dateLabel.textColor = [Palette redColor];
+            
+            [self openAlertWithTitle:@"Attention!" andMessage:@"Check your internet connection"];
+            
+        } else {
+            
+            self.dateLabel.backgroundColor = [Palette blueColor];
+            self.dateLabel.textColor = [Palette yellowColor];
+            [self getReferenceRates];
+        }
+    }
+}
+
+- (void)openAlertWithTitle:(NSString *)title andMessage:(NSString *)message {
+    
+    UIAlertController *alertController =
+    [UIAlertController alertControllerWithTitle:title
+                                        message:message
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController.view setTintColor:[Palette blueColor]];
+    
+    UIAlertAction *okAction =
+    [UIAlertAction actionWithTitle:@"Ok"
+                             style:UIAlertActionStyleDefault
+                           handler:nil];
+    
+    [alertController addAction:okAction];
+    
+    [self presentViewController:alertController animated:YES completion:^{
+        
+        [alertController.view setTintColor:[Palette blueColor]];
     }];
 }
 
@@ -127,7 +185,21 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
 
 - (IBAction)refreshButtonAction:(UIBarButtonItem *)sender {
     
-    [self getReferenceRates];
+    [self updateInterfaceWithReachability:self.internetReachability];
 }
+
+#pragma mark - Notification
+
+- (void)addNotification {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+}
+
+- (void) reachabilityChanged:(NSNotification *)notification {
+    
+    Reachability* currentReachibility = notification.object;
+    [self updateInterfaceWithReachability:currentReachibility];
+}
+
 
 @end

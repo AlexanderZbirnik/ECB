@@ -7,6 +7,7 @@
 //
 
 #import "ReferenceRates.h"
+#import "NSString+Additions.h"
 
 @implementation ReferenceRates
 
@@ -16,7 +17,7 @@
     if (self) {
         
         self.ownerName = name;
-        self.time = time;
+        self.time = [time AZ_convertToLocalDateFormat];
         self.rates = [[NSArray alloc] init];
     }
     return self;

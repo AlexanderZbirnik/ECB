@@ -21,6 +21,9 @@
 		C74D9B561F27BD0D006CECF7 /* ReferenceRatesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B551F27BD0D006CECF7 /* ReferenceRatesParser.m */; };
 		C74D9B591F27C843006CECF7 /* ReferenceRates.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B581F27C843006CECF7 /* ReferenceRates.m */; };
 		C74D9B5C1F27C996006CECF7 /* Rate.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B5B1F27C996006CECF7 /* Rate.m */; };
+		C74D9B5F1F27E4F0006CECF7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B5E1F27E4F0006CECF7 /* Reachability.m */; };
+		C74D9B621F27ED1E006CECF7 /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B611F27ED1E006CECF7 /* Palette.m */; };
+		C74D9B681F27EFD8006CECF7 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B671F27EFD8006CECF7 /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,12 @@
 		C74D9B581F27C843006CECF7 /* ReferenceRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceRates.m; sourceTree = "<group>"; };
 		C74D9B5A1F27C996006CECF7 /* Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rate.h; sourceTree = "<group>"; };
 		C74D9B5B1F27C996006CECF7 /* Rate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rate.m; sourceTree = "<group>"; };
+		C74D9B5D1F27E4F0006CECF7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C74D9B5E1F27E4F0006CECF7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C74D9B601F27ED1E006CECF7 /* Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
+		C74D9B611F27ED1E006CECF7 /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
+		C74D9B661F27EFD8006CECF7 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		C74D9B671F27EFD8006CECF7 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +118,8 @@
 				C74D9B491F279780006CECF7 /* NSObject+Additions.m */,
 				C74D9B4B1F2797DA006CECF7 /* UITableView+Additions.h */,
 				C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */,
+				C74D9B661F27EFD8006CECF7 /* NSString+Additions.h */,
+				C74D9B671F27EFD8006CECF7 /* NSString+Additions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -136,10 +147,14 @@
 		C74D9B3C1F278919006CECF7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C74D9B5D1F27E4F0006CECF7 /* Reachability.h */,
+				C74D9B5E1F27E4F0006CECF7 /* Reachability.m */,
 				C74D9B4E1F2799FD006CECF7 /* NetworkManager.h */,
 				C74D9B4F1F2799FD006CECF7 /* NetworkManager.m */,
 				C74D9B541F27BD0D006CECF7 /* ReferenceRatesParser.h */,
 				C74D9B551F27BD0D006CECF7 /* ReferenceRatesParser.m */,
+				C74D9B601F27ED1E006CECF7 /* Palette.h */,
+				C74D9B611F27ED1E006CECF7 /* Palette.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -249,8 +264,11 @@
 				C74D9B4A1F279780006CECF7 /* NSObject+Additions.m in Sources */,
 				C74D9B501F2799FD006CECF7 /* NetworkManager.m in Sources */,
 				C74D9B411F278A6F006CECF7 /* RatesViewController.m in Sources */,
+				C74D9B621F27ED1E006CECF7 /* Palette.m in Sources */,
+				C74D9B5F1F27E4F0006CECF7 /* Reachability.m in Sources */,
 				C74D9B461F2790AF006CECF7 /* RateCell.m in Sources */,
 				C74D9B561F27BD0D006CECF7 /* ReferenceRatesParser.m in Sources */,
+				C74D9B681F27EFD8006CECF7 /* NSString+Additions.m in Sources */,
 				C74D9B5C1F27C996006CECF7 /* Rate.m in Sources */,
 				C74D9B4D1F2797DA006CECF7 /* UITableView+Additions.m in Sources */,
 				C74D9B271F2787D5006CECF7 /* AppDelegate.m in Sources */,
