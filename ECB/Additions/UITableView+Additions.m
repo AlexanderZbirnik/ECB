@@ -11,10 +11,9 @@
 @implementation UITableView (Additions)
 
 -(void)AZ_registerNibWithName:(NSString *)nibName {
-  
-  UINib *nib = [UINib nibWithNibName:nibName bundle:nil];
-  [self registerNib:nib forCellReuseIdentifier:nibName];
+    
+    UINib *nib = [UINib nibWithNibName:nibName bundle:nil];
+    [self registerNib:nib forCellReuseIdentifier:nibName];
 }
-
 
 @end

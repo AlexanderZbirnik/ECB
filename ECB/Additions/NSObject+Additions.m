@@ -11,8 +11,8 @@
 @implementation NSObject (Additions)
 
 + (NSString *)AZ_className {
-  
-  return NSStringFromClass([self class]);
+    
+    return NSStringFromClass([self class]);
 }
 
 @end

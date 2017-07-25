@@ -17,6 +17,8 @@
 		C74D9B471F2790AF006CECF7 /* RateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74D9B451F2790AF006CECF7 /* RateCell.xib */; };
 		C74D9B4A1F279780006CECF7 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B491F279780006CECF7 /* NSObject+Additions.m */; };
 		C74D9B4D1F2797DA006CECF7 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */; };
+		C74D9B501F2799FD006CECF7 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B4F1F2799FD006CECF7 /* NetworkManager.m */; };
+		C74D9B561F27BD0D006CECF7 /* ReferenceRatesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B551F27BD0D006CECF7 /* ReferenceRatesParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		C74D9B491F279780006CECF7 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additions.m"; sourceTree = "<group>"; };
 		C74D9B4B1F2797DA006CECF7 /* UITableView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Additions.h"; sourceTree = "<group>"; };
 		C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Additions.m"; sourceTree = "<group>"; };
+		C74D9B4E1F2799FD006CECF7 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		C74D9B4F1F2799FD006CECF7 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		C74D9B541F27BD0D006CECF7 /* ReferenceRatesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceRatesParser.h; sourceTree = "<group>"; };
+		C74D9B551F27BD0D006CECF7 /* ReferenceRatesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceRatesParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,10 @@
 		C74D9B3C1F278919006CECF7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C74D9B4E1F2799FD006CECF7 /* NetworkManager.h */,
+				C74D9B4F1F2799FD006CECF7 /* NetworkManager.m */,
+				C74D9B541F27BD0D006CECF7 /* ReferenceRatesParser.h */,
+				C74D9B551F27BD0D006CECF7 /* ReferenceRatesParser.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -227,8 +237,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74D9B4A1F279780006CECF7 /* NSObject+Additions.m in Sources */,
+				C74D9B501F2799FD006CECF7 /* NetworkManager.m in Sources */,
 				C74D9B411F278A6F006CECF7 /* RatesViewController.m in Sources */,
 				C74D9B461F2790AF006CECF7 /* RateCell.m in Sources */,
+				C74D9B561F27BD0D006CECF7 /* ReferenceRatesParser.m in Sources */,
 				C74D9B4D1F2797DA006CECF7 /* UITableView+Additions.m in Sources */,
 				C74D9B271F2787D5006CECF7 /* AppDelegate.m in Sources */,
 				C74D9B241F2787D5006CECF7 /* main.m in Sources */,

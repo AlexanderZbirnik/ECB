@@ -7,6 +7,15 @@
 //
 
 #import "RatesViewController.h"
+#import "RateCell.h"
+
+#import "NetworkManager.h"
+#import "ReferenceRatesParser.h"
+
+#import "NSObject+Additions.h"
+#import "UITableView+Additions.h"
+
+static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
 
 @interface RatesViewController ()
 
@@ -22,7 +31,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.tableView AZ_registerNibWithName:[RateCell AZ_className]];
+    
+    [[NetworkManager sharedManager] downloadReferenceRatesWithURLString:ReferenceListUrl andSuccessHandler:^(NSURL *fileUrl) {
+        
+        
+    } failureHandler:^(NSError *error) {
+        
+        
+    }];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    
+    RateCell *cell =[tableView dequeueReusableCellWithIdentifier:[RateCell AZ_className]];
+    
+    if(!cell){
+        
+        cell = [[RateCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[RateCell AZ_className]];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"#%zd", indexPath.row];
+    
+    return cell;
 }
 
 #pragma mark - Actions
