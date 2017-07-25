@@ -13,6 +13,8 @@
 		C74D9B2F1F2787D5006CECF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74D9B2E1F2787D5006CECF7 /* Assets.xcassets */; };
 		C74D9B321F2787D5006CECF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74D9B301F2787D5006CECF7 /* LaunchScreen.storyboard */; };
 		C74D9B411F278A6F006CECF7 /* RatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B401F278A6F006CECF7 /* RatesViewController.m */; };
+		C74D9B461F2790AF006CECF7 /* RateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B441F2790AF006CECF7 /* RateCell.m */; };
+		C74D9B471F2790AF006CECF7 /* RateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74D9B451F2790AF006CECF7 /* RateCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		C74D9B331F2787D5006CECF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C74D9B3F1F278A6F006CECF7 /* RatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatesViewController.h; sourceTree = "<group>"; };
 		C74D9B401F278A6F006CECF7 /* RatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatesViewController.m; sourceTree = "<group>"; };
+		C74D9B431F2790AF006CECF7 /* RateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateCell.h; sourceTree = "<group>"; };
+		C74D9B441F2790AF006CECF7 /* RateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateCell.m; sourceTree = "<group>"; };
+		C74D9B451F2790AF006CECF7 /* RateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		C74D9B3D1F278919006CECF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C74D9B421F279086006CECF7 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +131,16 @@
 				C74D9B331F2787D5006CECF7 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C74D9B421F279086006CECF7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C74D9B431F2790AF006CECF7 /* RateCell.h */,
+				C74D9B441F2790AF006CECF7 /* RateCell.m */,
+				C74D9B451F2790AF006CECF7 /* RateCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74D9B321F2787D5006CECF7 /* LaunchScreen.storyboard in Resources */,
+				C74D9B471F2790AF006CECF7 /* RateCell.xib in Resources */,
 				C74D9B2F1F2787D5006CECF7 /* Assets.xcassets in Resources */,
 				C74D9B2D1F2787D5006CECF7 /* Main.storyboard in Resources */,
 			);
@@ -200,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74D9B411F278A6F006CECF7 /* RatesViewController.m in Sources */,
+				C74D9B461F2790AF006CECF7 /* RateCell.m in Sources */,
 				C74D9B271F2787D5006CECF7 /* AppDelegate.m in Sources */,
 				C74D9B241F2787D5006CECF7 /* main.m in Sources */,
 			);
@@ -362,6 +380,7 @@
 				C74D9B381F2787D5006CECF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

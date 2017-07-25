@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ILW-VC-dz2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rates View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="XPA-vT-qoY">
+            <objects>
+                <navigationController id="ILW-VC-dz2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ag7-fM-LqX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.023529411764705882" green="0.20392156862745098" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99607843137254903" green="0.94901960784313721" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gX3-yY-RX9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFK-qD-c9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1199" y="55"/>
+        </scene>
+        <!--European Central Bank-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="RatesViewController" id="BYZ-38-t0r" customClass="RatesViewController" sceneMemberID="viewController">
@@ -20,11 +40,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8YO-AK-EWx">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.023529411764705882" green="0.20392156862745098" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WsH-h0-Axv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="v3t-Br-Nzp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CSf-9r-ffj"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsC-dL-luz">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.20392156862745098" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X9N-9d-ZxA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.94901960784313721" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WsH-h0-Axv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Wv-vF-7fS"/>
+                            <constraint firstItem="WsH-h0-Axv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EJB-FT-BeX"/>
+                            <constraint firstAttribute="trailing" secondItem="UsC-dL-luz" secondAttribute="trailing" id="FAH-ww-5iN"/>
+                            <constraint firstItem="8YO-AK-EWx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QMr-zu-Gaz"/>
+                            <constraint firstItem="UsC-dL-luz" firstAttribute="top" secondItem="WsH-h0-Axv" secondAttribute="bottom" id="d9b-tb-qL9"/>
+                            <constraint firstAttribute="trailing" secondItem="WsH-h0-Axv" secondAttribute="trailing" id="faS-Rz-MqP"/>
+                            <constraint firstItem="UsC-dL-luz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kON-xB-Cku"/>
+                            <constraint firstItem="8YO-AK-EWx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNh-hU-pHo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UsC-dL-luz" secondAttribute="bottom" id="uIj-ei-dxc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="European Central Bank" id="z2v-MH-d8h">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="x4x-gp-6T2">
+                            <color key="tintColor" red="0.99607843137254903" green="0.94901960784313721" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refreshButtonAction:" destination="BYZ-38-t0r" id="l9x-R4-go9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="8YO-AK-EWx" id="POs-ZP-Fik"/>
+                        <outlet property="dateLabel" destination="UsC-dL-luz" id="byw-6o-p99"/>
+                        <outlet property="tableView" destination="WsH-h0-Axv" id="gfy-c6-QpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-330.39999999999998" y="53.523238380809602"/>
         </scene>
     </scenes>
 </document>

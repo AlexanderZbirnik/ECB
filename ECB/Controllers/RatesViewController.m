@@ -10,13 +10,24 @@
 
 @interface RatesViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end
 
 @implementation RatesViewController
 
+#pragma mark - Lifetime cycle methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+#pragma mark - Actions
+
+- (IBAction)refreshButtonAction:(UIBarButtonItem *)sender {
 }
 
 @end
