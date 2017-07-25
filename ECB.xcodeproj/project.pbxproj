@@ -15,6 +15,8 @@
 		C74D9B411F278A6F006CECF7 /* RatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B401F278A6F006CECF7 /* RatesViewController.m */; };
 		C74D9B461F2790AF006CECF7 /* RateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B441F2790AF006CECF7 /* RateCell.m */; };
 		C74D9B471F2790AF006CECF7 /* RateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74D9B451F2790AF006CECF7 /* RateCell.xib */; };
+		C74D9B4A1F279780006CECF7 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B491F279780006CECF7 /* NSObject+Additions.m */; };
+		C74D9B4D1F2797DA006CECF7 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		C74D9B431F2790AF006CECF7 /* RateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateCell.h; sourceTree = "<group>"; };
 		C74D9B441F2790AF006CECF7 /* RateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateCell.m; sourceTree = "<group>"; };
 		C74D9B451F2790AF006CECF7 /* RateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateCell.xib; sourceTree = "<group>"; };
+		C74D9B481F279780006CECF7 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additions.h"; sourceTree = "<group>"; };
+		C74D9B491F279780006CECF7 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additions.m"; sourceTree = "<group>"; };
+		C74D9B4B1F2797DA006CECF7 /* UITableView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Additions.h"; sourceTree = "<group>"; };
+		C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 		C74D9B391F278919006CECF7 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				C74D9B481F279780006CECF7 /* NSObject+Additions.h */,
+				C74D9B491F279780006CECF7 /* NSObject+Additions.m */,
+				C74D9B4B1F2797DA006CECF7 /* UITableView+Additions.h */,
+				C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -216,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74D9B4A1F279780006CECF7 /* NSObject+Additions.m in Sources */,
 				C74D9B411F278A6F006CECF7 /* RatesViewController.m in Sources */,
 				C74D9B461F2790AF006CECF7 /* RateCell.m in Sources */,
+				C74D9B4D1F2797DA006CECF7 /* UITableView+Additions.m in Sources */,
 				C74D9B271F2787D5006CECF7 /* AppDelegate.m in Sources */,
 				C74D9B241F2787D5006CECF7 /* main.m in Sources */,
 			);
