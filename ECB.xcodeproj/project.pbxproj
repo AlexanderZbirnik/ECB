@@ -24,8 +24,6 @@
 		C74D9B5F1F27E4F0006CECF7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B5E1F27E4F0006CECF7 /* Reachability.m */; };
 		C74D9B621F27ED1E006CECF7 /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B611F27ED1E006CECF7 /* Palette.m */; };
 		C74D9B681F27EFD8006CECF7 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B671F27EFD8006CECF7 /* NSString+Additions.m */; };
-		C74D9B6B1F27FFF7006CECF7 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B6A1F27FFF7006CECF7 /* UIView+Additions.m */; };
-		C74D9B6F1F280167006CECF7 /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C74D9B6E1F280167006CECF7 /* RoundedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,10 +58,6 @@
 		C74D9B611F27ED1E006CECF7 /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
 		C74D9B661F27EFD8006CECF7 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		C74D9B671F27EFD8006CECF7 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
-		C74D9B691F27FFF7006CECF7 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
-		C74D9B6A1F27FFF7006CECF7 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
-		C74D9B6D1F280167006CECF7 /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
-		C74D9B6E1F280167006CECF7 /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +120,6 @@
 				C74D9B4C1F2797DA006CECF7 /* UITableView+Additions.m */,
 				C74D9B661F27EFD8006CECF7 /* NSString+Additions.h */,
 				C74D9B671F27EFD8006CECF7 /* NSString+Additions.m */,
-				C74D9B691F27FFF7006CECF7 /* UIView+Additions.h */,
-				C74D9B6A1F27FFF7006CECF7 /* UIView+Additions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -170,7 +162,6 @@
 		C74D9B3D1F278919006CECF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C74D9B6C1F28014D006CECF7 /* Views */,
 				C74D9B421F279086006CECF7 /* Cells */,
 			);
 			path = Views;
@@ -195,15 +186,6 @@
 				C74D9B451F2790AF006CECF7 /* RateCell.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		C74D9B6C1F28014D006CECF7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C74D9B6D1F280167006CECF7 /* RoundedView.h */,
-				C74D9B6E1F280167006CECF7 /* RoundedView.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +273,6 @@
 				C74D9B4D1F2797DA006CECF7 /* UITableView+Additions.m in Sources */,
 				C74D9B271F2787D5006CECF7 /* AppDelegate.m in Sources */,
 				C74D9B241F2787D5006CECF7 /* main.m in Sources */,
-				C74D9B6B1F27FFF7006CECF7 /* UIView+Additions.m in Sources */,
-				C74D9B6F1F280167006CECF7 /* RoundedView.m in Sources */,
 				C74D9B591F27C843006CECF7 /* ReferenceRates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
