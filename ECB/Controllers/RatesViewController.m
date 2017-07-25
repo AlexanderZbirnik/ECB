@@ -33,14 +33,6 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
     [super viewDidLoad];
     
     [self.tableView AZ_registerNibWithName:[RateCell AZ_className]];
-    
-    [[NetworkManager sharedManager] downloadReferenceRatesWithURLString:ReferenceListUrl andSuccessHandler:^(NSURL *fileUrl) {
-        
-        
-    } failureHandler:^(NSError *error) {
-        
-        
-    }];
 }
 
 #pragma mark - UITableViewDataSource
