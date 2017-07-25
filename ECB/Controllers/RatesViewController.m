@@ -47,16 +47,21 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
 - (void)getReferenceRates {
     
     [self.activityIndicator startAnimating];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
     [[NetworkManager sharedManager] downloadReferenceRatesWithURLString:ReferenceListUrl andSuccessHandler:^(NSURL *fileUrl) {
         
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        
         self.parser = [[ReferenceRatesParser alloc] init];
         self.parser.delegate = self;
+        
         [self.parser startWithUrl:fileUrl];
         
     } failureHandler:^(NSError *error) {
         
         [self.activityIndicator stopAnimating];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     }];
 }
 
@@ -112,8 +117,8 @@ static NSString * const ReferenceListUrl = @"http://www.ecb.europa.eu/stats/euro
     
     Rate *rate = [self.referenceRates.rates objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = rate.currency;
-    cell.detailTextLabel.text = rate.rate;
+    cell.currencyLabel.text = rate.currency;
+    cell.rateLabel.text = rate.rate;
     
     return cell;
 }

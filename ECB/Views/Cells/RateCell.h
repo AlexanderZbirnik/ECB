@@ -10,4 +10,8 @@
 
 @interface RateCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *currencyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rateLabel;
+
+
 @end
