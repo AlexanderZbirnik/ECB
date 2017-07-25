@@ -19,13 +19,15 @@
 @end
 
 @protocol ReferenceRatesParserDelegate
-@required
-
-- (void)referenceRatesParser:(ReferenceRatesParser *)referenceRatesParser referenceRatesOwnerName:(NSString *)name date:(NSString *)date currency:(NSString *)currency andRate:(NSString *)rate;
 
 @optional
 
-- (void)startedReferenceRatesParser:(ReferenceRatesParser *)referenceRatesParser;
 - (void)stoppedReferenceRatesParser:(ReferenceRatesParser *)referenceRatesParser;
+
+@required
+
+- (void)referenceRatesParser:(ReferenceRatesParser *)referenceRatesParser referenceRatesOwnerName:(NSString *)name time:(NSString *)time currency:(NSString *)currency andRate:(NSString *)rate;
+
+
 
 @end

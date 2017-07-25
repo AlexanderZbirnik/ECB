@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSString *currency;
 @property (strong, nonatomic) NSString *rate;
 
+- (instancetype)initWithCurrency:(NSString *)currency andRate:(NSString *)rate;
+
 @end

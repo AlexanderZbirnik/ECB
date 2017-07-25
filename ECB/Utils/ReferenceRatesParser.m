@@ -50,8 +50,6 @@ static NSString * const ReferenceRatesParserEmptyString = @"";
     self.currency = ReferenceRatesParserEmptyString;
     self.rate = ReferenceRatesParserEmptyString;
     self.isName = NO;
-    
-    [self.delegate startedReferenceRatesParser:self];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -80,7 +78,7 @@ static NSString * const ReferenceRatesParserEmptyString = @"";
     
     if (nameNotEmpty && dateNotEmpty && currencyNotEmpty && rateNotEmpty) {
         
-        [self.delegate referenceRatesParser:self referenceRatesOwnerName:self.name date:self.date currency:self.currency andRate:self.rate];
+        [self.delegate referenceRatesParser:self referenceRatesOwnerName:self.name time:self.date currency:self.currency andRate:self.rate];
         self.currency = ReferenceRatesParserEmptyString;
         self.rate = ReferenceRatesParserEmptyString;
     }
