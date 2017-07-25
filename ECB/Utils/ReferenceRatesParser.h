@@ -23,4 +23,9 @@
 
 - (void)referenceRatesParser:(ReferenceRatesParser *)referenceRatesParser referenceRatesOwnerName:(NSString *)name date:(NSString *)date currency:(NSString *)currency andRate:(NSString *)rate;
 
+@optional
+
+- (void)startedReferenceRatesParser:(ReferenceRatesParser *)referenceRatesParser;
+- (void)stoppedReferenceRatesParser:(ReferenceRatesParser *)referenceRatesParser;
+
 @end

@@ -43,13 +43,15 @@ static NSString * const ReferenceRatesParserEmptyString = @"";
 
 #pragma mark - NSXMLParserDelegate
 
-- (void) parserDidStartDocument:(NSXMLParser *)parser {
+- (void)parserDidStartDocument:(NSXMLParser *)parser {
     
     self.name = ReferenceRatesParserEmptyString;
     self.date = ReferenceRatesParserEmptyString;
     self.currency = ReferenceRatesParserEmptyString;
     self.rate = ReferenceRatesParserEmptyString;
     self.isName = NO;
+    
+    [self.delegate startedReferenceRatesParser:self];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -68,7 +70,6 @@ static NSString * const ReferenceRatesParserEmptyString = @"";
             
             self.currency = [attributeDict objectForKey:ReferenceRatesElementNameCurrency];
             self.rate = [attributeDict objectForKey:ReferenceRatesElementNameRate];
-            
         }
     }
     
@@ -99,6 +100,12 @@ static NSString * const ReferenceRatesParserEmptyString = @"";
         
         self.isName = NO;
     }
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser {
+    
+    [self.delegate stoppedReferenceRatesParser:self];
+    
 }
 
 @end
